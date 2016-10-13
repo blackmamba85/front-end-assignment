@@ -1,0 +1,81 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #10617F;
+    color: #0f617e;
+}
+
+a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #0f617e;
+}
+
+header {
+    background-color: white;
+    height: 450px;
+    padding: 60px 0 0 0;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+.logo {
+    margin-left: 70px;
+    width: 6%
+}
+
+.headerlink {
+    float: right;
+    margin-right: 70px;
+}
+
+.top_header {
+    display: block
+}
+
+#botton_header {
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#col1 {
+    float: left;
+    margin-top: 98px;
+}
+
+#col2 {
+    float: left;
+    margin-top: 98px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+#mobilitiet {
+    width: 260px;
+    padding: 25px 5px 25px 5px;
+    background-color: #ffea54;
+}
+
+#ondernemen {
+    padding: 25px;
+    background-color: #88e8cf;
+    margin-left: 35px;
+}
+
+#wonen {
+    width: 220px;
+    padding: 25px 5px 25px 5px;
+    background-color: #00cac6;
+}
+
+#about {
+    height: 600px;
+    background-image: url('../_images/blueBck.png');
+    background-size: 100% 100%;
+    width: 95%;
+    margin: 0 auto;
+}
