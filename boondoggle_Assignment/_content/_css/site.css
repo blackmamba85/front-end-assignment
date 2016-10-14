@@ -11,64 +11,65 @@ a {
 
 header {
     background-color: white;
-    height: 450px;
-    padding: 60px 0 0 0;
+    height: 477px;
+    padding: 50px 0 0 0;
     width: 95%;
     margin: 0 auto;
     margin-top: 0px;
 }
 
 .logo {
-    margin-left: 70px;
+    margin-left: 80px;
     width: 6%
 }
 
 .headerlink {
     float: right;
-    margin-right: 70px;
+    margin-right: 80px;
 }
 
 .top_header {
     display: block
 }
 
-#botton_header {
-    display: block;
-    margin: auto;
-    width: 50%;
+.botton_header {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
     font-size: 50px;
     font-weight: 700;
 }
 
 #col1 {
-    float: left;
     margin-top: 98px;
+    text-align: right;
 }
 
 #col2 {
-    float: left;
-    margin-top: 98px;
-    margin: 0 auto;
     color: white;
     text-align: center;
 }
 
+#col3 {
+    margin-top: 190px;
+    margin-left: -120px;
+}
+
 #mobilitiet {
     width: 260px;
-    padding: 25px 5px 25px 5px;
+    padding: 26px 5px 26px 5px;
     background-color: #ffea54;
 }
 
 #ondernemen {
-    padding: 25px;
+    padding: 26px;
     background-color: #88e8cf;
     margin-left: 35px;
 }
 
 #wonen {
     width: 220px;
-    padding: 25px 5px 25px 5px;
+    padding: 26px 5px 26px 5px;
     background-color: #00cac6;
 }
 

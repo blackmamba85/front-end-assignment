@@ -4,10 +4,11 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="_content\_css\site.css" />
+    <link rel="stylesheet" href="_content\_css\animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-
     <header>
         <div class="top_header">
             <a href="#"><img src="_content\_images\logo.png" alt="logo" class="logo"></a>
@@ -15,7 +16,7 @@
         </div>
         <!-- top_header -->
 
-        <div id="botton_header">
+        <div class="botton_header">
             <div id="col1">
                 <p>Hoe ziet</p>
             </div>
@@ -33,7 +34,7 @@
 
             </div>
             <div id="col3">
-
+                <p>er morgen uit?</p>
             </div>
 
         </div>
@@ -49,3 +50,19 @@
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function() {
+        $('#wonen').addClass('animated bounceInDown');
+
+        setTimeout(function() {
+            $('#ondernemen').show().addClass('animated bounceInDown');
+        }, 6500);
+
+
+
+        $('#mobilitiet').addClass('animated bounceInDown');
+
+
+    });
+</script>
