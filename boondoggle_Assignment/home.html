@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="_content\_css\animate.css">
     <link rel="stylesheet" href="_content\_css\caroussel.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="_content\_js\roundaboutjs\jquery.roundabout.min.js"></script>
+    <script src="_content\_js\roundaboutjs\jquery.roundabout.js"></script>
 
 </head>
 
@@ -58,15 +58,33 @@
 
         <div id="carouse-wrap">
             <ul id="carousel" class="top_slider roundabout-holder">
-                <li class="roundabout-item"><img src="_content/_images/green.png" alt="green" width="20%"></li>
-                <li class="roundabout-item"><img src="_content/_images/yellow.png" alt="yellow" width="20%"></li>
-                <li class="roundabout-item"><img src="_content/_images/blue.png" alt="blue" width="20%"></li>
+               <li id="text-one"><img src="_content/_images/yellow.png" alt="yellow" class="slide"></li>
+                <li id="text-two"><img src="_content/_images/green.png" alt="green" class="slide"></li>
+                
+                <li id="text-three"><img src="_content/_images/blue.png" alt="blue" class="slide"></li>
             </ul>
+        </div>
+
+        <div id="carouse-text" class="aboutinfo">
+        <div id="text-info-one">
+            Naast het aanbieden van preventietips en
+        </div>
+        <div id="text-info-two">
+            ghfjhjhgjhj  ahkjahkjh kajkdjkj kajdkj k kadjkjdkajda
+        </div>
+        <div id="text-info-three">
+            uyiyuoyoyui hhkdhsd hkahdjsjd hajdjhdjs hjhdjhadja
+        </div>
+            
         </div>
     </section>
 
 
     <!-- about -->
+
+
+
+
 
 </body>
 
@@ -86,10 +104,42 @@
             });
         });
 
-        $('ul').roundabout();
+        $('#carousel').roundabout({
 
+        });
+
+        $("#text-info-two").attr("style", "display: block")
+         $("#text-info-two").attr("style", "display: none")
+        $("#text-info-three").attr("style", "display: none")
+
+
+
+        $('#text-one').click(function() {
+            $("#text-info-one").attr("style", "display: block")
+            $('#text-info-one').addClass('animated fadeInDown');
+            $("#text-info-two").attr("style", "display: none")
+            $("#text-info-three").attr("style", "display: none")
+                  
+        });
+
+         $('#text-two').click(function() {
+             $("#text-info-two").attr("style", "display: block")
+              $('#text-info-two').addClass('animated fadeInDown');
+            $("#text-info-one").attr("style", "display: none")
+            $("#text-info-three").attr("style", "display: none")       
+        });
+
+          $('#text-three').click(function() {
+             $("#text-info-three").attr("style", "display: block")
+            $('#text-info-three').addClass('animated fadeInDown');
+            $("#text-info-two").attr("style", "display: none")
+            $("#text-info-one").attr("style", "display: none")        
+        });
 
 
 
     });
+
+
+    
 </script>

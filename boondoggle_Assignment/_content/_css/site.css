@@ -85,7 +85,7 @@ header {
 }
 
 #about {
-    height: 600px;
+    height: 1200px;
     background-image: url('../_images/blueBck.png');
     background-size: 100% 100%;
     color: #FEFEFC;
@@ -109,4 +109,15 @@ header {
     width: 55%;
     font-family: "Helvetica-Thin";
     font-size: 28px;
+}
+
+#carouse-text{    
+    display: flex;
+    margin: 0 auto;
+    width: 50%
+}
+
+img:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
