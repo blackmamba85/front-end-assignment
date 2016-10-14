@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="_content\_css\site.css" />
     <link rel="stylesheet" href="_content\_css\animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
 </head>
 
 <body>
@@ -16,36 +17,41 @@
         </div>
         <!-- top_header -->
 
-        <div class="botton_header">
+        <div class="botton_header bigletters">
             <div id="col1">
                 <p>Hoe ziet</p>
             </div>
-
             <div id="col2">
-                <div id="mobilitiet">
+                <div id="mobilitiet" class="invisible">
                     Mobilitiet
                 </div>
-                <div id="ondernemen">
+                <div id="ondernemen" class="invisible">
                     Ondernemen
                 </div>
                 <div id="wonen">
                     Wonen
                 </div>
-
             </div>
             <div id="col3">
                 <p>er morgen uit?</p>
             </div>
-
         </div>
         <!-- botton_header -->
-
-
     </header>
     <!-- header -->
+
     <section id="about">
 
-    </section>
+    <div class="bigletters titles">
+    Wat is <br>het Lab?
+    </div>
+    <div class="aboutinfo">
+    gsjwhgdjwgjdgejwhgdjhdgewjhgdekjgdfjkegjk
+    </div>
+   
+
+
+    </section> <!-- about -->
 
 </body>
 
@@ -53,16 +59,22 @@
 
 <script>
     $(document).ready(function() {
+
+        //Header Blocks Animation
         $('#wonen').addClass('animated bounceInDown');
+        $('#wonen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('#ondernemen').removeClass('invisible');
+             $('#ondernemen').show().addClass('animated bounceInDown');
+              $('#ondernemen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                 $('#mobilitiet').removeClass('invisible');
+                  $('#mobilitiet').addClass('animated bounceInDown');
+              });
+        });
+       
 
-        setTimeout(function() {
-            $('#ondernemen').show().addClass('animated bounceInDown');
-        }, 6500);
 
 
-
-        $('#mobilitiet').addClass('animated bounceInDown');
-
+       
 
     });
 </script>

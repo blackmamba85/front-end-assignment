@@ -2,6 +2,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: #10617F;
     color: #0f617e;
+    margin-top: 0 !important;
 }
 
 a {
@@ -11,11 +12,11 @@ a {
 
 header {
     background-color: white;
-    height: 477px;
+    height: 482px;
     padding: 50px 0 0 0;
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 0px;
+   
 }
 
 .logo {
@@ -36,7 +37,11 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    font-size: 50px;
+    
+}
+
+.bigletters{
+    font-size: 48px;
     font-weight: 700;
 }
 
@@ -55,28 +60,51 @@ header {
     margin-left: -120px;
 }
 
+.invisible{
+    visibility: hidden;
+}
+
+
 #mobilitiet {
     width: 260px;
     padding: 26px 5px 26px 5px;
     background-color: #ffea54;
+
 }
 
 #ondernemen {
     padding: 26px;
     background-color: #88e8cf;
     margin-left: 35px;
+
+   
 }
 
 #wonen {
     width: 220px;
     padding: 26px 5px 26px 5px;
-    background-color: #00cac6;
+    background-color: #00cac6;     
 }
 
 #about {
+     display: flex;
     height: 600px;
     background-image: url('../_images/blueBck.png');
     background-size: 100% 100%;
-    width: 95%;
+    color: #FEFEFC;
+    width: 80%;
     margin: 0 auto;
+}
+
+.titles{
+    margin-left: 250px;
+    padding-top: 170px;
+    width: 15%;
+    
+}
+
+.aboutinfo{
+     padding-top: 170px;
+      margin-left: 60px;
+     width: 55%;
 }
