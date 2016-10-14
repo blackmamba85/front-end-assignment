@@ -5,8 +5,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="_content\_css\site.css" />
     <link rel="stylesheet" href="_content\_css\animate.css">
+    <link rel="stylesheet" href="_content\_css\caroussel.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+    <script src="_content\_js\roundaboutjs\jquery.roundabout.min.js"></script>
+
 </head>
 
 <body>
@@ -41,17 +43,30 @@
     <!-- header -->
 
     <section id="about">
+        <div id="info">
+            <div class="bigletters titles">
+                Wat is <br>het Lab?
+            </div>
+            <div class="aboutinfo">
+                <div>Bij Interpolis doen we <b>meer dan verzekeren</b>. Wij bouwen aan een veiligere wereld. We zien elke dag dingen die beter kunnen, maar soms weten we niet meteen hoe. Het <b>Interpolis Lab</b> is een initiatief om samen <b>met heel Nederland</b>                    te zoeken naar
+                    <b>oplossingen</b>.</div>
+                <br>
+                <div>Op deze website kan je onze acties volgen. Je kan nieuwe oplossingen zien ontstaan en groeien. En je kan actief er actief aan meewerken.</div>
+            </div>
+        </div>
 
-    <div class="bigletters titles">
-    Wat is <br>het Lab?
-    </div>
-    <div class="aboutinfo">
-    gsjwhgdjwgjdgejwhgdjhdgewjhgdekjgdfjkegjk
-    </div>
-   
+
+        <div id="carouse-wrap">
+            <ul id="carousel" class="top_slider roundabout-holder">
+                <li class="roundabout-item"><img src="_content/_images/green.png" alt="green" width="20%"></li>
+                <li class="roundabout-item"><img src="_content/_images/yellow.png" alt="yellow" width="20%"></li>
+                <li class="roundabout-item"><img src="_content/_images/blue.png" alt="blue" width="20%"></li>
+            </ul>
+        </div>
+    </section>
 
 
-    </section> <!-- about -->
+    <!-- about -->
 
 </body>
 
@@ -62,19 +77,19 @@
 
         //Header Blocks Animation
         $('#wonen').addClass('animated bounceInDown');
-        $('#wonen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $('#wonen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $('#ondernemen').removeClass('invisible');
-             $('#ondernemen').show().addClass('animated bounceInDown');
-              $('#ondernemen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                 $('#mobilitiet').removeClass('invisible');
-                  $('#mobilitiet').addClass('animated bounceInDown');
-              });
+            $('#ondernemen').show().addClass('animated bounceInDown');
+            $('#ondernemen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('#mobilitiet').removeClass('invisible');
+                $('#mobilitiet').addClass('animated bounceInDown');
+            });
         });
-       
+
+        $('ul').roundabout();
 
 
 
-       
 
     });
 </script>
