@@ -3,15 +3,26 @@
 
 <head>
     <title>Home</title>
+    <!-- css -->
     <link rel="stylesheet" href="_content\_css\site.css" />
     <link rel="stylesheet" href="_content\_css\animate.css">
     <link rel="stylesheet" href="_content\_css\caroussel.css">
+    <link rel="stylesheet" href="_content\_js\jquery-bxslider\jquery.bxslider.css">
+
+    <!-- angular -->
+    <script src="_content\_js\angular.min.js"></script>
+    <script src="_content\_js\app\app.js"></script>
+
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="_content\_js\roundaboutjs\jquery.roundabout.js"></script>
+    <script src="_content\_js\jquery-bxslider\jquery.bxslider.min.js"></script>
+
+
 
 </head>
 
-<body>
+<body ng-app="myApp">
     <header>
         <div class="top_header">
             <a href="#"><img src="_content\_images\logo.png" alt="logo" class="logo"></a>
@@ -54,45 +65,110 @@
                 <div>Op deze website kan je onze acties volgen. Je kan nieuwe oplossingen zien ontstaan en groeien. En je kan actief er actief aan meewerken.</div>
             </div>
         </div>
-
-
         <div id="carouse-wrap">
             <ul id="carousel" class="top_slider roundabout-holder">
-               <li id="text-one"><img src="_content/_images/yellow.png" alt="yellow" class="slide"></li>
+                <li id="text-one"><img src="_content/_images/yellow.png" alt="yellow" class="slide"></li>
                 <li id="text-two"><img src="_content/_images/green.png" alt="green" class="slide"></li>
-                
+
                 <li id="text-three"><img src="_content/_images/blue.png" alt="blue" class="slide"></li>
             </ul>
         </div>
-
         <div id="carouse-text" class="aboutinfo">
-        <div id="text-info-one">
-            Naast het aanbieden van preventietips en
-        </div>
-        <div id="text-info-two">
-            ghfjhjhgjhj  ahkjahkjh kajkdjkj kajdkj k kadjkjdkajda
-        </div>
-        <div id="text-info-three">
-            uyiyuoyoyui hhkdhsd hkahdjsjd hajdjhdjs hjhdjhadja
-        </div>
-            
+            <div id="text-info-one">
+                Naast het aanbieden van <b><u>preventietips</u></b> en <b><u>verzekeringsoplossingen</u></b> is Interpolis vastbesloten een oplossing te vinden voor maatschappelijke uitdagingen.
+            </div>
+            <div id="text-info-two">
+                Lorem ipsum dolor sit amet, consectetur <b><u>adipiscing</u></b> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </div>
+            <div id="text-info-three">
+                Duis aute irure dolor in reprehenderit in <b><u>voluptate</u></b> velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
         </div>
     </section>
-
-
     <!-- about -->
 
 
+    <section id="aspirations">
+        <div class="bigletters titles">
+            Concrete <br>Ambities.
+        </div>
+        <div id="ambities-holder" ng-controller="appCtrl">
+            <div class="ambities-slider">
+                <div id="ambitie" class="ambitie slide" ng-repeat="ambitie in ambities">
+                    <h2>{{ambitie.title}}</h2>
+                    <a class="ambitie-subtitle" href="#" ng-model="ambitie.subtitle1" ng-class="{'color-blue': ambitie.subtitle1=== 'Wonen', 'color-yellow': ambitie.subtitle1===  'Mobilitiet', 'color-green': ambitie.subtitle1=== 'Ondernemen'}">
+                        <img ng-show="ambitie.subtitle1!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{ambitie.subtitle1}}</a>
+                    <a class="ambitie-subtitle" href="#" ng-model="ambitie.subtitle2" ng-class="{'color-blue': ambitie.subtitle2=== 'Wonen', 'color-yellow': ambitie.subtitle2===  'Mobilitiet', 'color-green': ambitie.subtitle2=== 'Ondernemen'}">
+                        <img ng-show="ambitie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{ambitie.subtitle2}}</a>
+                    <p class="ambitie-text">{{ambitie.text}}</p>
+                    <a class="link" href="#">Meer weeten ...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- aspirations -->
+
+    <section id="acties">
+        <div class="bigletters titles">
+            Recente Acties.
+        </div>
+
+
+
+
+        <div id="acties-holder" ng-controller="appCtrl">
+
+            <div id="actie" class="actie {{actie.class}}" ng-repeat="actie in acties" ng-model="actie.number" ng-class="{'actie-large': actie.number=== '1' || actie.number=== '4', 'actie-small': actie.number=== '2' || actie.number=== '3'}">
+                <p class="actie-text-small">{{actie.textSmall}}</p>
+                <p class="actie-text-medium">{{actie.textMedium}}</p>
+                <p class="actie-text">{{actie.text}}</p>
+                <h2>{{actie.title}}</h2>
+                <a class="actie-subtitle" href="#" ng-model="actie.subtitle1" ng-class="{'color-blue': actie.subtitle1=== 'Wonen', 'color-yellow': actie.subtitle1===  'Mobilitiet', 'color-green': actie.subtitle1=== 'Ondernemen'}">
+                    <img ng-show="actie.subtitle1!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle1}}</a>
+                <br>
+                <a class="actie-subtitle" href="#" ng-model="actie.subtitle2" ng-class="{'color-blue': actie.subtitle2=== 'Wonen', 'color-yellow': actie.subtitle2===  'Mobilitiet', 'color-green': actie.subtitle2=== 'Ondernemen'}">
+                    <img ng-show="actie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle2}}</a>
+                <br>
+
+            </div>
+
+        </div>
+
+
+    </section>
 
 
 
 </body>
+<footer>
+    <p><b>LAB.Interpolis</b>, een initiatief van <b>Interpolis.</b></p>
+    <h1>Samen werken aan een veiliger Nederland.</h1>
+    <a href="#">Meer over het Lab ...</a>
+    <br>
+    <a href="#">Meer over Interpolis ...</a>
+    <ul>
+        <li>&#169; 2015 Interpolis. Alle rechten voorbehouden -</li>
+        <li>
+            <a href="#"></a>Privacy & Cookies - </li>
+        <li>
+            <a href="#"></a>Sitemap - </li>
+        <li>
+            <a href="#"></a>Disclaimer - </li>
+        <li>
+            <a href="#"></a>Toegankelijkheid - </li>
+        <li>
+            <a href="#"></a>Contact</li>
+
+    </ul>
+
+
+</footer>
 
 </html>
 
 <script>
     $(document).ready(function() {
-
         //Header Blocks Animation
         $('#wonen').addClass('animated bounceInDown');
         $('#wonen').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
@@ -104,42 +180,44 @@
             });
         });
 
-        $('#carousel').roundabout({
+        $('#carousel').roundabout();
 
-        });
-
+        //Show texts 
         $("#text-info-two").attr("style", "display: block")
-         $("#text-info-two").attr("style", "display: none")
+        $("#text-info-two").attr("style", "display: none")
         $("#text-info-three").attr("style", "display: none")
-
-
 
         $('#text-one').click(function() {
             $("#text-info-one").attr("style", "display: block")
             $('#text-info-one').addClass('animated fadeInDown');
             $("#text-info-two").attr("style", "display: none")
             $("#text-info-three").attr("style", "display: none")
-                  
         });
 
-         $('#text-two').click(function() {
-             $("#text-info-two").attr("style", "display: block")
-              $('#text-info-two').addClass('animated fadeInDown');
+        $('#text-two').click(function() {
+            $("#text-info-two").attr("style", "display: block")
+            $('#text-info-two').addClass('animated fadeInDown');
             $("#text-info-one").attr("style", "display: none")
-            $("#text-info-three").attr("style", "display: none")       
+            $("#text-info-three").attr("style", "display: none")
         });
 
-          $('#text-three').click(function() {
-             $("#text-info-three").attr("style", "display: block")
+        $('#text-three').click(function() {
+            $("#text-info-three").attr("style", "display: block")
             $('#text-info-three').addClass('animated fadeInDown');
             $("#text-info-two").attr("style", "display: none")
-            $("#text-info-one").attr("style", "display: none")        
+            $("#text-info-one").attr("style", "display: none")
+        });
+
+
+        $('.ambities-slider').bxSlider({
+            slideWidth: 380,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 10
         });
 
 
 
     });
-
-
-    
 </script>

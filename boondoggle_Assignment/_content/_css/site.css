@@ -18,7 +18,7 @@ a {
 header {
     background-color: white;
     padding: 50px 0 0 0;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -89,7 +89,7 @@ header {
     background-image: url('../_images/blueBck.png');
     background-size: 100% 100%;
     color: #FEFEFC;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -99,19 +99,19 @@ header {
 
 .titles {
     margin-left: 250px;
-    padding-top: 170px;
+    padding-top: 130px;
     width: 15%;
 }
 
 .aboutinfo {
-    padding-top: 170px;
-    margin-left: 60px;
+    padding-top: 100px;
     width: 55%;
     font-family: "Helvetica-Thin";
-    font-size: 28px;
+    font-size: 26px;
+    text-align: center;
 }
 
-#carouse-text{    
+#carouse-text {
     display: flex;
     margin: 0 auto;
     width: 50%
@@ -119,5 +119,200 @@ header {
 
 img:hover {
     opacity: 0.8;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+}
+
+#aspirations {
+    height: 900px;
+    color: #10617F;
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#ambities-holder {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.ambitie {
+    width: 95%;
+    height: 450px;
+    border: 8px solid #f0f0f0;
+    padding: 4px;
+}
+
+#ambitie h2 {
+    background-color: #193c48;
+    padding: 15px;
+    color: white;
+    width: 160px;
+    margin-bottom: 4px;
+    margin-left: -12px;
+}
+
+#ambitie p {
+    padding: 30px;
+    color: #10617F;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.link {
+    margin: 30px;
+    font-size: medium;
+}
+
+.ambitie-subtitle {
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+    color: #10617F;
+    width: 160px;
+    margin-left: -12px;
+    font-weight: 600;
+    width: 350px;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.tag {
+    width: 10px;
+}
+
+.color-green {
+    background-color: #88e8cf;
+}
+
+.color-yellow {
+    background-color: #ffea54;
+}
+
+.color-blue {
+    background-color: #00cac6;
+}
+
+#acties {
+    background-color: #f0f0f0;
+    height: 1500px;
+    width: 85%;
+    margin: 0 auto;
+    color: #10617F;
+}
+
+#acties-holder {
+    margin: 0px auto;
+    width: 80%;
+}
+
+#acties-holder p {
+    color: white;
+    font-size: 35px;
+}
+
+#actie h2 {
+    background-color: #193c48;
+    color: white;
+    padding: 15px;
+    width: 160px;
+    float: left;
+    margin-left: -50px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.actie {
+    display: inline-block;
+    padding: 50px;
+    margin: 25px;
+}
+
+#actie p {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+#actie a {
+    text-align: right;
+}
+
+.actie-small {
+    height: 320px;
+    width: 25%;
+}
+
+.actie-large {
+    height: 400px;
+    width: 35%;
+}
+
+.actie-subtitle {
+    text-decoration: none;
+    padding: 4px 10px 4px 10px;
+    color: #10617F;
+    text-align: center;
+    font-weight: 600;
+    margin-left: 140px;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.actie-text-small {
+    font-size: 20px !important;
+}
+
+.actie-text-medium {
+    font-size: 28px !important;
+}
+
+.ambie07 {
+    background: url('../_images/ambie04.png');
+    background-size: 100% 100%;
+}
+
+.ambie05 {
+    background-color: #ffea54;
+    background-size: 100% 100%;
+}
+
+.ambie04 {
+    background-color: #88e8cf;
+    background-size: 100% 100%;
+}
+
+.ambie06 {
+    background: url('../_images/ambie07.png');
+    background-size: 100% 100%;
+}
+
+footer {
+    color: white;
+    height: 400px;
+    background-color: #10617F;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    padding: 25px;
+    font-size: 20px
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 70%;
+    font-family: "Helvetica-Thin";
+    font-size: medium;
+    padding: 30px;
+}
+
+footer li {
+    display: inline;
 }
