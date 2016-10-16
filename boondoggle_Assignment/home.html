@@ -104,7 +104,9 @@
                         <img ng-show="ambitie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{ambitie.subtitle2}}</a>
                     <p class="ambitie-text">{{ambitie.text}}</p>
                     <a class="link" href="#">Meer weeten ...</a>
+                    <img ng-src="{{ambitie.img}}" width="100%" alt="blocks" />
                 </div>
+
             </div>
         </div>
     </section>
@@ -123,16 +125,16 @@
             <div id="actie" class="actie {{actie.class}} hvr-glow" ng-repeat="actie in acties" ng-model="actie.number" ng-class="{'actie-large': actie.number=== '1' || actie.number=== '4', 'actie-small': actie.number=== '2' || actie.number=== '3'}">
                 <p class="actie-text-small">{{actie.textSmall}}</p>
                 <p class="actie-text-medium">{{actie.textMedium}}</p>
-                <p class="actie-text">{{actie.text}}</p>
+                <p id="actie-text">{{actie.text}}</p>
                 <h2>{{actie.title}}</h2>
-                <a class="actie-subtitle" href="#" ng-model="actie.subtitle1" ng-class="{'color-blue': actie.subtitle1=== 'Wonen', 'color-yellow': actie.subtitle1===  'Mobilitiet', 'color-green': actie.subtitle1=== 'Ondernemen'}">
-                    <img ng-show="actie.subtitle1!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle1}}</a>
-                <br>
-                <br>
-                <a class="actie-subtitle" href="#" ng-model="actie.subtitle2" ng-class="{'color-blue': actie.subtitle2=== 'Wonen', 'color-yellow': actie.subtitle2===  'Mobilitiet', 'color-green': actie.subtitle2=== 'Ondernemen'}">
-                    <img ng-show="actie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle2}}</a>
-                <br>
+                <div id="actie-link">
+                    <a class="actie-subtitle" href="#" ng-model="actie.subtitle1" ng-class="{'color-blue': actie.subtitle1=== 'Wonen', 'color-yellow': actie.subtitle1===  'Mobilitiet', 'color-green': actie.subtitle1=== 'Ondernemen'}">
+                        <img ng-show="actie.subtitle1!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle1}}</a>
 
+                    <a class="actie-subtitle" href="#" ng-model="actie.subtitle2" ng-class="{'color-blue': actie.subtitle2=== 'Wonen', 'color-yellow': actie.subtitle2===  'Mobilitiet', 'color-green': actie.subtitle2=== 'Ondernemen'}">
+                        <img ng-show="actie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle2}}</a>
+                    <br>
+                </div>
             </div>
 
         </div>
@@ -149,20 +151,22 @@
     <a href="#">Meer over het Lab</a> ...
     <br>
     <a href="#">Meer over Interpolis</a> ...
+    <br>
     <ul>
-        <li>&#169; 2015 Interpolis. Alle rechten voorbehouden -</li>
+        <li class="copyright">&#169; 2015 Interpolis. Alle rechten voorbehouden</li>
         <li>
-            <a href="#"></a>Privacy & Cookies - </li>
+            <a href="#">Privacy & Cookies - </a></li>
         <li>
-            <a href="#"></a>Sitemap - </li>
+            <a href="#">Sitemap -  </a></li>
         <li>
-            <a href="#"></a>Disclaimer - </li>
+            <a href="#">Disclaimer - </a></li>
         <li>
-            <a href="#"></a>Toegankelijkheid - </li>
+            <a href="#">Toegankelijkheid - </a></li>
         <li>
-            <a href="#"></a>Contact</li>
+            <a href="#">Contact</a></li>
 
     </ul>
+
 
 
 </footer>

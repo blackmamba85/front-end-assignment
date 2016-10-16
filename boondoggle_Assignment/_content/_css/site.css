@@ -118,7 +118,7 @@ header {
 }
 
 img:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     filter: alpha(opacity=50);
     /* For IE8 and earlier */
 }
@@ -168,6 +168,17 @@ img:hover {
 .link {
     margin: 30px;
     font-size: medium;
+    padding-bottom: 20px;
+    display: block
+}
+
+#ambitie {
+    position: absolute;
+}
+
+#ambitie img {
+    position: relative;
+    bottom: 0;
 }
 
 .ambitie-subtitle {
@@ -217,6 +228,7 @@ img:hover {
 }
 
 #actie h2 {
+    float: left;
     background-color: #193c48;
     color: white;
     padding: 15px;
@@ -229,13 +241,11 @@ img:hover {
 .actie {
     float: left;
     display: block;
-    overflow: hidden;
     margin: 0 auto;
     padding: 50px;
     width: 200px;
     height: 200px;
     margin: 50px;
-    position: relative;
 }
 
 #actie p {
@@ -245,8 +255,16 @@ img:hover {
 }
 
 #actie a {
+    float: right !important;
+    text-align: right;
+    width: 100px;
+}
+
+#actie-link {
     float: right;
-    margin-bottom: 30px;
+    margin-left: 200px;
+    bottom: 0;
+    position: relative;
 }
 
 .actie-small {
@@ -268,8 +286,7 @@ img:hover {
     font-weight: 600;
     margin-left: 140px;
     font-family: Helvetica, Arial, sans-serif;
-    margin-left: 280px;
-    position: absolute;
+    margin-right: -50px;
     bottom: 0;
 }
 
@@ -319,13 +336,22 @@ footer p {
     font-size: 20px
 }
 
+.copyright {
+    padding-right: 50px;
+}
+
 footer ul {
     list-style: none;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
     font-family: "Helvetica-Thin";
-    font-size: medium;
+    font-size: small;
+    font-weight: 300;
     padding: 30px;
+}
+
+footer ul a {
+    text-decoration: none;
 }
 
 footer li {
