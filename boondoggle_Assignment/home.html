@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="_content\_css\site.css" />
     <link rel="stylesheet" href="_content\_css\animate.css">
     <link rel="stylesheet" href="_content\_css\caroussel.css">
+    <link href="_content\_css\Hover-css\css\hover-min.css" rel="stylesheet">
     <link rel="stylesheet" href="_content\_js\jquery-bxslider\jquery.bxslider.css">
 
     <!-- angular -->
@@ -119,13 +120,14 @@
 
         <div id="acties-holder" ng-controller="appCtrl">
 
-            <div id="actie" class="actie {{actie.class}}" ng-repeat="actie in acties" ng-model="actie.number" ng-class="{'actie-large': actie.number=== '1' || actie.number=== '4', 'actie-small': actie.number=== '2' || actie.number=== '3'}">
+            <div id="actie" class="actie {{actie.class}} hvr-glow" ng-repeat="actie in acties" ng-model="actie.number" ng-class="{'actie-large': actie.number=== '1' || actie.number=== '4', 'actie-small': actie.number=== '2' || actie.number=== '3'}">
                 <p class="actie-text-small">{{actie.textSmall}}</p>
                 <p class="actie-text-medium">{{actie.textMedium}}</p>
                 <p class="actie-text">{{actie.text}}</p>
                 <h2>{{actie.title}}</h2>
                 <a class="actie-subtitle" href="#" ng-model="actie.subtitle1" ng-class="{'color-blue': actie.subtitle1=== 'Wonen', 'color-yellow': actie.subtitle1===  'Mobilitiet', 'color-green': actie.subtitle1=== 'Ondernemen'}">
                     <img ng-show="actie.subtitle1!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle1}}</a>
+                <br>
                 <br>
                 <a class="actie-subtitle" href="#" ng-model="actie.subtitle2" ng-class="{'color-blue': actie.subtitle2=== 'Wonen', 'color-yellow': actie.subtitle2===  'Mobilitiet', 'color-green': actie.subtitle2=== 'Ondernemen'}">
                     <img ng-show="actie.subtitle2!=''" src="_content/_images/tag.png" alt="tag" class="tag" /> {{actie.subtitle2}}</a>
@@ -144,9 +146,9 @@
 <footer>
     <p><b>LAB.Interpolis</b>, een initiatief van <b>Interpolis.</b></p>
     <h1>Samen werken aan een veiliger Nederland.</h1>
-    <a href="#">Meer over het Lab ...</a>
+    <a href="#">Meer over het Lab</a> ...
     <br>
-    <a href="#">Meer over Interpolis ...</a>
+    <a href="#">Meer over Interpolis</a> ...
     <ul>
         <li>&#169; 2015 Interpolis. Alle rechten voorbehouden -</li>
         <li>

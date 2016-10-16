@@ -13,7 +13,7 @@ angular.module('myApp', []).controller('appCtrl', function($scope) {
         { number: '1', class: 'ambie07', title: '# Ambitie07', subtitle1: 'Mobilitiet', subtitle2: '', text: 'Heel Nederland in Automodus.', textSmall: '', textMedium: 'Campagne:' },
         { number: '2', class: 'ambie05', title: '# Ambitie05', subtitle1: 'Mobilitiet', subtitle2: 'Wonen', text: 'Nieuwe onderzoeks-resultaten rond domotica vs inbraak..', textSmall: '', textMedium: '' },
         { number: '3', class: 'ambie04', title: '# Ambitie04', subtitle1: 'Mobilitiet', subtitle2: 'Ondernemen', text: 'Freelancers + veilige wifi, Webinar di 14 juni 2016', textSmall: '', textMedium: '' },
-        { number: '4', class: 'ambie06', title: '# Ambitie07', subtitle1: 'Mobilitiet', subtitle2: '', text: 'Ongevallen met driverless cars.', textSmall: 'Livestrem', textMedium: 'Debat TU Delft:' },
+        { number: '4', class: 'ambie06', title: '# Ambitie07', subtitle1: 'Ondernemen', subtitle2: '', text: 'Ongevallen met driverless cars.', textSmall: 'Livestrem', textMedium: 'Debat TU Delft:' },
 
 
     ];

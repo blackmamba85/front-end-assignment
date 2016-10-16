@@ -145,6 +145,10 @@ img:hover {
     padding: 4px;
 }
 
+#ambitie:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #ambitie h2 {
     background-color: #193c48;
     padding: 15px;
@@ -183,6 +187,7 @@ img:hover {
 
 .color-green {
     background-color: #88e8cf;
+    width: 150px !important;
 }
 
 .color-yellow {
@@ -203,7 +208,7 @@ img:hover {
 
 #acties-holder {
     margin: 0px auto;
-    width: 80%;
+    width: 90%;
 }
 
 #acties-holder p {
@@ -216,17 +221,21 @@ img:hover {
     color: white;
     padding: 15px;
     width: 160px;
-    float: left;
-    margin-left: -50px;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    left: 0;
+    margin-left: -50px;
 }
 
 .actie {
-    display: inline-block;
+    float: left;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
     padding: 50px;
-    margin: 25px;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    position: relative;
 }
 
 #actie p {
@@ -236,17 +245,19 @@ img:hover {
 }
 
 #actie a {
-    text-align: right;
+    float: right;
+    margin-bottom: 30px;
 }
 
 .actie-small {
     height: 320px;
-    width: 25%;
+    width: 28%;
+    margin-bottom: 140px;
 }
 
 .actie-large {
-    height: 400px;
-    width: 35%;
+    height: 410px;
+    width: 30%;
 }
 
 .actie-subtitle {
@@ -256,7 +267,10 @@ img:hover {
     text-align: center;
     font-weight: 600;
     margin-left: 140px;
-    font-family: Helvetica, Arial, sans-serif
+    font-family: Helvetica, Arial, sans-serif;
+    margin-left: 280px;
+    position: absolute;
+    bottom: 0;
 }
 
 .actie-text-small {
@@ -297,6 +311,7 @@ footer {
 
 footer a {
     color: white;
+    font-family: "Helvetica-Thin";
 }
 
 footer p {
